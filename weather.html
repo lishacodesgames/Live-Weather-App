@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather Service</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--Boxicons-->
+    <link rel="stylesheet" href="weather.css">
+    <link rel="icon" href="weather-news.png">
+</head>
+<body>
+    <div class="weather-app">
+        <div class="search-container">
+            <input type="text" placeholder="Search city..." class="city-search">
+            <button><i class='bx bx-search-alt-2'></i></button>
+        </div>
+        
+        <div class="weather-display">
+            <div class="location-container">
+                <h2 class="location">Mumbai</h2>
+                <p class="date">Saturday, December 13th 2025</p>
+            </div>
+            
+            <div class="temp-container">
+                <img src="weather-icon.png" alt="weather-icon" class="weather-icon">
+                <p class="temperature">29°</p>
+            </div>
+            
+            <p class="weather-description">Sunny</p>
+            
+            <div class="weather-details">
+                <div class="detail">
+                    <i class='bx bxs-droplet-half'></i>
+                    <span class="humidity">40%</span>
+                </div>
+                
+                <div class="detail">
+                    <i class='bx bx-wind'></i>
+                    <span class="wind-speed">11kmph</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>

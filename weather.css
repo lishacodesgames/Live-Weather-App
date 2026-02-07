@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Tourney", sans-serif;
+    font-weight: 600;
+    background: linear-gradient(135deg, #72edf2 10%, #5151e5 90%); /* Percentages determine at what point that color stop has reached its full strength. The blending happens between color stops.*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: black; /* Text color */
+}
+
+.weather-app {
+    background: hsla(0, 0%, 100%, 0.9); /* Semi-transparent white background */
+    padding: 2rem;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 10px rgba(27, 27, 30, 0.3); /* x, y, blur, color */
+    backdrop-filter: blur(10px);
+}
+
+.search-container {
+    display: flex;
+    gap: 10px; /* Space between its children */
+    margin-bottom: 25px;
+}
+
+.search-container input {
+    flex: 1; /* Takes up all remaining space */
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsla(0, 0%, 100%, 0.4); /* Semi-transparent white. You can just about see it */
+    font-size: 16px;
+    box-shadow: 0 4px 6px hsla(0, 10%, 50%, 0.3);
+    transition: all 0.3s ease;
+}
+
+.search-container input:hover {
+    box-shadow: 0 4px 10px hsla(0, 10%, 50%, 0.3);
+    transform: translateY(-2px);
+}
+
+.search-container input:focus {
+    outline: none;
+    box-shadow: 0 4px 12px hsla(0, 10%, 50%, 0.3);
+    background: white;
+}
+
+.search-container button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: hsl(240, 74%, 61%);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px hsla(0, 10%, 50%, 0.3);
+    font-size: 20px;
+}
+
+.search-container button:hover {
+    background: hsl(240, 54%, 49%);
+    transform: translateY(-2px);
+}
+
+.location-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.location {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.date {
+    color: #666;
+    font-size: 1rem;;
+}
+
+.temp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+p.temperature {
+    font-size: 5rem;
+    color: hsl(0, 5%, 17%);
+    font-weight: 750;
+}
+
+.temp-container img.weather-icon {
+    height: 8rem;
+}
+
+.weather-description {
+    text-align: center;
+    transform: translateX(-12px);
+    font-size: 1.5rem;
+    color: #ccae4a;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-top: -25px;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 5px;
+}
+
+.detail i {
+    color: #5151e5;
+    font-size: 1.5rem;
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 500px) { /* Adjust styles for screens smaller than 500px */
+    .weather-app {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+    .temp-container {
+        margin-bottom: 70px;
+    }
+    p.temperature {
+        font-size: 3rem;
+    }
+    img.weather-icon {
+        height: 4rem;
+    }
+    .weather-details {
+        margin-top: 15px;
+        font-size: 1.5rem;
+    }
+    .detail i {
+        transform: translateY(1px);
+    }
+}
